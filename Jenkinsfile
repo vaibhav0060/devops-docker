@@ -3,15 +3,15 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Docker Hub creds
-        IMAGE_NAME = 'satya44jit/httpd-app'
-        REMOTE_HOST = 'ec2-user@13.201.27.112'
+        IMAGE_NAME = 'vaibhav0060/httpd-app'
+        REMOTE_HOST = 'ec2-user@56.155.27.208'
         REMOTE_APP_NAME = 'httpd-app'
     }
 
     stages {
         stage('Checkout from GitHub') {
             steps {
-                git branch: 'main', url: 'https://github.com/chinabudhi123/devops-docker.git'
+                git branch: 'main', url: 'https://github.com/vaibhav0060/devops-docker.git'
             }
         }
 
